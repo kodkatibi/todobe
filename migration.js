@@ -1,13 +1,12 @@
+const mysql = require('mysql');
+const migration = require('mysql-migrations');
 
-var mysql = require('mysql');
-var migration = require('mysql-migrations');
-
-var connection = mysql.createPool({
+const connection = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'rest_api'
+    database: 'todolist'
 });
 
 function executeQuery(sql, callback) {
